@@ -252,7 +252,7 @@
                             <a href="javascripts:;" class="num">9</a>
                             ...
                         </div>
-                        <a href="javascripts:;" class="nextpage">> 下一页 </a>
+                        <a href="javascripts:;" class="nextpage on">> 下一页 </a>
                     </div>
                 </div>
 
@@ -394,6 +394,7 @@
 </script>
 <script>
     var page=1
+    //页面跳转
     function gotodetail() {
        window.location.href='/detail.html'
     }
@@ -459,10 +460,26 @@
             $('.leftitem>.commentslist').html(template('temp8',{data:data}))
         })
 
+        //上下页黑色样式
+        function setBlack(page) {
+            if(page<=1){
+                console.log(1)
+                $('.fenye>.prepage').removeClass('on')
+                $('.fenye>.nextpage').addClass('on')
+            }else if(page<9){
+                $('.fenye>.prepage').addClass('on')
+                $('.fenye>.nextpage').addClass('on')
+            }else{
+                $('.fenye>.prepage').addClass('on')
+                $('.fenye>.nextpage').removeClass('on')
+            }
+        }
+
         //点哪页哪页显示
         const pages=$('#test > a')
         pages.click(function () {
             page= $(this).index()+1
+            setBlack(page)
            pages.attr('class','num')
             $(this).addClass('on')
             $.get('/getComments?page='+page, function (data) {
@@ -485,7 +502,7 @@
             if(page==1){
                 $(pages[0]).addClass('on')
             }
-
+            setBlack(page)
             console.log(page);
             $.get('/getComments?page='+page, function (data) {
                 addStarImg(data)
@@ -497,10 +514,10 @@
         //点下一页
         $('.fenye>.nextpage').click(function () {
             page++
+            pages.attr('class','num')
             if(page>=9){
                 page=9
             }
-            pages.attr('class','num')
             if(page<9){
                 $(pages[page-1]).addClass('on')
             }
@@ -508,6 +525,7 @@
                 $(pages[8]).addClass('on')
             }
             console.log(page);
+            setBlack(page)
             $.get('/getComments?page='+page, function (data) {
                 addStarImg(data)
                 setTime(data)

@@ -69,7 +69,7 @@
             </div>
             <div class="menu">
                 <ul class="menuwrap">
-                    <li class="onemenu">
+                    <!--<li class="onemenu">
                         <a href="javascripts:;">
                             <span>家庭保洁</span>
                             <img src="./images/right.png" alt="">
@@ -328,7 +328,7 @@
                                 <a href="javascripts:;">机场泊车</a>
                             </li>
                         </ul>
-                    </li>
+                    </li>-->
                 </ul>
             </div>
         </div>
@@ -783,19 +783,6 @@
             },
         })
 
-        //二级菜单显示,切换小图标
-        const $onemenus=$('.menuwrap>.onemenu')
-        $onemenus.on('mouseover',function(){
-            $(this).children('.twomenuwrap').css('display','block')
-            $(this).find('img').attr('src','./images/icon1.png')
-            $(this).find('img').css('marginLeft',53+'px')
-        }).on('mouseout',function () {
-            $(this).children('.twomenuwrap').css('display','none')
-            $(this).find('img').attr('src','./images/right.png')
-            $(this).find('img').css('marginLeft',20+'px')
-
-        })
-
         //头部定位问题
         const $header=$('#header')
         $(document).scroll(function () {
@@ -803,13 +790,29 @@
                 $header.addClass('on')
             }else{
                 $header.removeClass('on')
-
             }
         })
 
     })
 </script>
 
+<script type="text/html" id="temp0">
+    {{each data.shops}}
+    <li class="onemenu">
+        <a href="javascripts:;">
+            <span>{{$value.serviceIndex}}</span>
+            <img src="./images/right.png" alt="">
+        </a>
+        <ul class="twomenuwrap">
+            {{each $value.serviceType}}
+            <li class="twowrap">
+                <a href="javascripts:;">{{$value}}</a>
+            </li>
+            {{/each}}
+        </ul>
+    </li>
+    {{/each}}
+</script>
 <script type="text/html" id="temp1">
     {{each data.shops}}
     <div class="list"> <!--遍历大模块-->
@@ -850,15 +853,34 @@
     </li>
     {{/each}}
 </script>
+
 <script>
     $(function () {
         $.get('/getShops', function (data) {
             $('.listwraper').append(template('temp1', {data: data}));
+            $('.menu>.menuwrap').append(template('temp0', {data: data}));
+            menu()
         })
         $.get('/getCities', function (data) {
             $('.citieslist').append(template('temp2', {data: data}));
             console.log(data);
         })
     })
+
+    function menu() {
+        //二级菜单显示,切换小图标
+        const $onemenus=$('.menuwrap>.onemenu')
+        $onemenus.on('mouseover',function(){
+            $(this).children('.twomenuwrap').css('display','block')
+            $(this).find('img').attr('src','./images/icon1.png')
+            $(this).find('img').css('marginLeft',53+'px')
+        }).on('mouseout',function () {
+            $(this).children('.twomenuwrap').css('display','none')
+            $(this).find('img').attr('src','./images/right.png')
+            $(this).find('img').css('marginLeft',20+'px')
+
+        })
+    }
+
 </script>
 </html>

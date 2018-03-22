@@ -200,7 +200,9 @@
 }
 .serviceitem .content .contentleft .leftitem .detailcontainer {
   width: 100%;
-  background: #fff;
+  /*.detailwrap:hover{
+            background: transparent;
+          }*/
 }
 .serviceitem .content .contentleft .leftitem .detailcontainer .detailwrap {
   width: 100%;
@@ -210,7 +212,6 @@
   height: 200px;
   border-bottom: 1px solid #e5e5e5;
   cursor: pointer;
-  /*background: #fff;*/
 }
 .serviceitem .content .contentleft .leftitem .detailcontainer .detailwrap a .detail .image {
   float: left;
@@ -309,6 +310,9 @@
   font-size: 16px;
   color: #333;
   padding-bottom: 20px;
+}
+.serviceitem .content .contentleft .leftitem .detail:hover {
+  background: transparent;
 }
 .serviceitem .content .contentleft .leftitem .h5 {
   background: #fff;
@@ -440,6 +444,9 @@
 .serviceitem .content .contentleft .leftitem .fenye .pages .on {
   background: #fb474f;
 }
+.serviceitem .content .contentleft .leftitem .fenye .on {
+  color: black;
+}
 .serviceitem .content .contentright {
   float: right;
   margin-right: 120px;
@@ -455,6 +462,9 @@
   vertical-align: middle;
   margin: 50px 0 0 50px;
   width: 130px;
+}
+.serviceitem .content .contentright .bottom:first-child {
+  background: url("../images/service/fuwushang2_07.jpg");
 }
 .serviceitem .baozhang {
   text-align: center;

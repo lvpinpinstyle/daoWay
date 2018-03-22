@@ -240,6 +240,9 @@
 .app .listwraper .list .item .itemserverce:hover {
   box-shadow: 5px 5px 10px #898989;
 }
+.app .listwraper .list:nth-child(2n) {
+  background: transparent;
+}
 .app .baozhang {
   text-align: center;
   width: 100%;
