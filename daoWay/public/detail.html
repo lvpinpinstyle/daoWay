@@ -291,7 +291,7 @@
     </div>
     {{/each}}
 </script>
-<div type="text/html" id="temp12">
+<script type="text/html" id="temp12">
     {{each data.detail}}
     <div class="righttop">
     <h3>服务商</h3>
@@ -314,7 +314,7 @@
     <img src="./images/daowayApp.png" alt="">
     </div>
     {{/each}}
-</div>
+</script>
 
 <script>
     $(function () {
@@ -337,7 +337,7 @@
         $.get('/getDetail', function (data) {
             $('.contentleft').append(template('temp11', {data: data}));
 
-            $('.contrightcont').append(template('temp12',{data:data}))
+            $('.servicecontents>.contrightcont').append(template('temp12',{data:data}))
         })
     })
 </script>
