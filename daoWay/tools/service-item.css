@@ -1,0 +1,62 @@
+.serviceitem {
+  width: 100%;
+  /*background: #fff;*/
+}
+.serviceitem #header {
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-around;
+  width: 1300px;
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  height: 65px;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+}
+.serviceitem #header .headerleft {
+  margin-top: 12px;
+}
+.serviceitem #header .headermiddle {
+  line-height: 65px;
+}
+.serviceitem #header .headermiddle a {
+  font-size: 16px;
+  color: #000;
+}
+.service-item #header .headermiddle a img {
+  vertical-align: middle;
+}
+.serviceitem #header .headermiddle a span {
+  font-weight: bold;
+}
+.serviceitem #header .headermiddle a span:last-child:hover {
+  color: #e94840;
+}
+.serviceitem #header .headerright {
+  display: flex;
+  width: 45%;
+  justify-content: space-around;
+  line-height: 65px;
+}
+.serviceitem #header .headerright .rightitem {
+  background-color: #fff;
+}
+.serviceitem #header .headerright .rightitem a {
+  font-weight: bold;
+  color: #000;
+}
+.serviceitem #header .headerright .rightitem a:hover {
+  color: #e94840;
+}
+.serviceitem #header .headerright .rightitem:last-child a {
+  background: #e94840;
+  border-radius: 5px;
+  margin-top: 13px;
+  padding: 4px;
+  color: #fff;
+}
+.serviceitem #header .headerright .on a {
+  color: #e94840;
+}

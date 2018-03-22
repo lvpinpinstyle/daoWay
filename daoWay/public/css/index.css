@@ -1,0 +1,354 @@
+.app {
+  width: 100%;
+}
+.app #header {
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-around;
+  width: 1300px;
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid #e5e5e5;
+  height: 65px;
+}
+.app #header.on {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  animation: show 1.5s ease;
+}
+@keyframes show {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.app #header .headerleft {
+  margin-top: 12px;
+}
+.app #header .headermiddle {
+  line-height: 65px;
+}
+.app #header .headermiddle a {
+  font-size: 16px;
+  color: #000;
+}
+.app #header .headermiddle a img {
+  vertical-align: middle;
+}
+.app #header .headermiddle a span {
+  font-weight: bold;
+}
+.app #header .headermiddle a span:last-child:hover {
+  color: #e94840;
+}
+.app #header .headerright {
+  display: flex;
+  width: 45%;
+  justify-content: space-around;
+  line-height: 65px;
+}
+.app #header .headerright .rightitem {
+  /*background-color: #fff;*/
+}
+.app #header .headerright .rightitem a {
+  font-weight: bold;
+  color: #000;
+}
+.app #header .headerright .rightitem a:hover {
+  color: #e94840;
+}
+.app #header .headerright .rightitem:last-child a {
+  background: #e94840;
+  border-radius: 5px;
+  margin-top: 13px;
+  padding: 4px;
+  color: #fff;
+}
+.app #header .headerright .on a {
+  color: #e94840;
+}
+.app .main {
+  /*margin-top: 66px;*/
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.app .main .banner {
+  width: 100%;
+}
+.app .main .banner .swiper-container {
+  width: 100%;
+}
+.app .main .banner .swiper-container .swiper-wrapper {
+  width: 100%;
+}
+.app .main .banner .swiper-container .swiper-wrapper .swiper-slide {
+  width: 100%;
+}
+.app .main .banner .swiper-container .swiper-wrapper .swiper-slide img {
+  width: 100%;
+  height: 420px;
+}
+.app .main .menu {
+  position: absolute;
+  left: 40px;
+  top: 0;
+  z-index: 3;
+  width: 180px;
+}
+.app .main .menu .menuwrap {
+  width: 100%;
+  background: #757881;
+}
+.app .main .menu .menuwrap .onemenu {
+  height: 42px;
+  line-height: 42px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  padding-left: 45px;
+}
+.app .main .menu .menuwrap .onemenu:hover {
+  background: #60646d;
+}
+.app .main .menu .menuwrap .onemenu a span {
+  color: #fff;
+  display: inline-block;
+  width: 70px;
+  font-weight: bold;
+}
+.app .main .menu .menuwrap .onemenu a img {
+  margin-left: 20px;
+}
+.app .main .menu .menuwrap .onemenu .twomenuwrap {
+  position: absolute;
+  left: 180px;
+  top: 0;
+  background: rgba(255, 255, 255, 0.9);
+  display: none;
+  width: 160px;
+  margin-top: 0;
+}
+.app .main .menu .menuwrap .onemenu .twomenuwrap .twowrap {
+  height: 42px;
+  line-height: 42px;
+  font-size: 16px;
+  cursor: pointer;
+  padding-left: 45px;
+}
+.app .main .menu .menuwrap .onemenu .twomenuwrap .twowrap a {
+  color: #121212;
+  font-weight: bold;
+}
+.app .main .menu .menuwrap .onemenu .twomenuwrap .twowrap a:hover {
+  color: #e94840;
+}
+.app .listwraper {
+  width: 100%;
+}
+.app .listwraper .list {
+  width: 100%;
+  background: #fff;
+  box-sizing: border-box;
+  padding: 50px 60px 20px;
+}
+.app .listwraper .list .itemtext {
+  width: 100%;
+  text-align: center;
+}
+.app .listwraper .list .itemtext h2 {
+  color: #3d3838;
+  font-weight: 800;
+  font-size: 28px;
+  font-family: "Microsoft YaHei";
+}
+.app .listwraper .list .itemtext p {
+  font-size: 22px;
+  color: #3d3838;
+  margin-top: 15px;
+  font-family: "幼圆";
+}
+.app .listwraper .list .itemtext p .more {
+  float: right;
+  color: #898989;
+  font-size: 18px;
+  font-family: "幼圆";
+}
+.app .listwraper .list .item {
+  display: flex;
+  margin-top: 40px;
+}
+.app .listwraper .list .item .itemserverce {
+  padding: 20px;
+  width: 230px;
+  border: 1px solid #eaeaea;
+  margin: 0 5px;
+  background: #fff;
+  cursor: pointer;
+  height: 345px;
+}
+.app .listwraper .list .item .itemserverce a img {
+  width: 210px;
+  height: 210px;
+}
+.app .listwraper .list .item .itemserverce a .serverceName {
+  font-size: 16px;
+  padding: 10px 0;
+  font-weight: 800;
+  color: #000;
+  height: 28px;
+  overflow: hidden;
+  width: 101%;
+}
+.app .listwraper .list .item .itemserverce a .servercedescription {
+  color: #929292;
+  padding: 5px 0;
+  text-overflow: ellipsis;
+  font-size: 13px;
+  line-height: 18px;
+  height: 58px;
+}
+.app .listwraper .list .item .itemserverce a .serverceprice {
+  display: flex;
+  justify-content: space-around;
+  font-size: 14px;
+  padding: 5px 5px;
+  font-weight: 600;
+  height: 20px;
+  line-height: 20px;
+  color: #fb474f;
+}
+.app .listwraper .list .item .itemserverce a .serverceprice .left {
+  font-weight: 600;
+  height: 20px;
+  line-height: 20px;
+  color: #fb474f;
+}
+.app .listwraper .list .item .itemserverce a .serverceprice .right {
+  width: 76px;
+  height: 24px;
+  line-height: 22px;
+  text-align: center;
+  background: #fb474f;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 14px;
+}
+.app .listwraper .list .item .itemserverce:hover {
+  box-shadow: 5px 5px 10px #898989;
+}
+.app .baozhang {
+  text-align: center;
+  width: 100%;
+  padding-top: 60px;
+  background: #fff;
+}
+.app .baozhang h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: bold;
+}
+.app .baozhang h2 i {
+  color: #fb474f;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 800;
+}
+.app .baozhang p {
+  font-size: 22px;
+  color: #3d3838;
+  margin: 0;
+}
+.app .service {
+  width: 100%;
+  padding-top: 20px;
+  background: #fff;
+  height: 66px;
+  display: flex;
+  justify-content: center;
+}
+.app .service .anquan {
+  font-size: 18px;
+  margin-right: 35px;
+}
+.app .service .anquan img {
+  vertical-align: middle;
+  margin-right: 2px;
+}
+.app .cities {
+  width: 100%;
+  padding-top: 50px;
+  height: 170px;
+  background: #fff;
+  overflow: hidden;
+}
+.app .cities .city {
+  float: left;
+  font-size: 18px;
+  font-weight: 700;
+  margin-left: 80px;
+}
+.app .cities .citieslist {
+  float: right;
+  margin-left: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 1090px;
+}
+.app .cities .citieslist .cityitem {
+  font-size: 16px;
+  font-style: normal;
+  margin-right: 50px;
+  color: #898989;
+  display: inline-block;
+  line-height: 30px;
+  width: 6%;
+  text-align: center;
+  font-weight: 200;
+  cursor: pointer;
+}
+.app .cities .citieslist .cityitem a:hover {
+  color: #e94840;
+}
+.app .company {
+  margin-top: 50px;
+  background: transparent;
+}
+.app .company .friends {
+  width: 1400px;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 18px;
+  color: #1d1515;
+  font-weight: bold;
+  padding-left: 50px;
+}
+.app .company .companylist {
+  margin-top: 20px;
+  background: transparent;
+  display: flex;
+  padding: 0 40px;
+  justify-content: space-around;
+  height: 60px;
+  text-align: center;
+}
+.app .company .companylist .companyitem {
+  background: #fff;
+  padding: 0 5px;
+  box-sizing: border-box;
+  width: 10%;
+}
+.app .company .companylist .companyitem img {
+  width: 100%;
+}
+.app .beian {
+  text-align: left;
+  margin-left: 50px;
+  color: #898989;
+  line-height: 40px;
+  font-size: 14px;
+}

@@ -1,0 +1,275 @@
+.service{
+  width: 100%;
+  .header{
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-around;
+    width: 1300px;
+    background: rgba(255,255,255,0.9);
+    border-bottom: 1px solid #e5e5e5;
+    height: 65px;
+    &.on{
+      position: fixed;
+      top: 0;
+      left:0;
+      z-index: 10;
+      animation: show 1.5s ease;
+      @keyframes show{
+        from {
+          transform: translateY(-100%) ;
+        }
+        to {
+          transform: translateY(0);
+        }
+      }
+    }
+    .headerleft{
+      margin-top:12px;
+    }
+    .headermiddle{
+      line-height: 65px;
+      a{
+        font-size: 16px;
+        color: #000;
+        img{
+          vertical-align: middle;
+        }
+        span{
+          font-weight: bold;
+        }
+        span:last-child{
+          &:hover{
+            color: #e94840;
+          }
+        }
+      }
+    }
+    .headerright{
+      display: flex;
+      width: 45%;
+      justify-content: space-around;
+      line-height: 65px;
+      .rightitem{
+        /*background-color: #fff;*/
+        a{
+          font-weight: bold;
+          color: #000;
+          &:hover{
+            color:#e94840;
+          }
+        }
+      }
+      .rightitem:last-child{
+        a{
+          background: #e94840;
+          border-radius: 5px;
+          margin-top: 13px;
+          padding: 4px;
+          color: #fff;
+        }
+      }
+      .on{
+        a{
+          color: #e94840;
+        }
+      }
+    }
+  }
+  h2{
+    line-height: 85px;
+    width: 1220px;
+    padding: 0 90px;
+    margin: 0 auto;
+    font-size: 18px;
+    margin-top: 66px;
+    font-weight: bold;
+    color:#333;
+  }
+  .content{
+    width: 90%;
+    overflow: hidden;
+    margin: 0 auto 50px;
+    .left{
+      width: 970px;
+      float: left;
+      .list{
+        width:100%;
+        overflow: hidden;
+        .item{
+          float: left;
+          width: 232px;
+          height: 300px;
+          border: 1px solid #eaeaea;
+          padding: 10px;
+          margin-right: 10px;
+          margin-bottom: 10px;
+          background: #fff;
+          cursor: pointer;
+          text-align: center;
+          box-sizing: border-box;
+          &:hover{
+            box-shadow: 5px 5px 10px #898989;
+          }
+          .img{
+            vertical-align: middle;
+            width: 210px;
+            height: 210px;
+          }
+          .serviceName{
+            margin-top: 15px;
+            height: 26px;
+            line-height: 26px;
+            text-align: left;
+            .icon{
+              margin:0 6px 5px 0;
+              vertical-align: middle;
+            }
+            .title{
+              font-size: 16px;
+              margin-left: 0.1rem;
+              font-weight: 700;
+            }
+          }
+          .ratings{
+            height: 26px;
+            line-height: 26px;
+            overflow: hidden;
+            font-size: 12px;
+            .lefttitle{
+              float: left;
+              color: #929292;
+            }
+            .righttitle{
+              float: right;
+              color: #929292;
+            }
+          }
+        }
+      }
+    }
+    .right{
+      float: right;
+      width: 230px;
+      .top{
+        cursor: pointer;
+        vertical-align: middle;
+        width: 230px;
+      }
+      .bottom{
+        width: 230px;
+        height: 290px;
+        background: url('../images/erweima.jpg') no-repeat center;
+        margin-top: 10px;
+        .image{
+          vertical-align: middle;
+          margin: 50px 0 0 50px;
+          width: 130px;
+        }
+      }
+    }
+  }
+  .getmore{
+    width: 100%;
+    margin: 0 auto;
+    height: 152px;
+    text-align: center;
+    .more{
+      width: 200px;
+      height: 50px;
+      line-height: 50px;
+      border: 1px solid #e5e5e5;
+      border-radius: 5px;
+      margin: 50px 5px;
+      background: #fff;
+      display: inline-block;
+      font-size: 16px;
+      .morestore{
+        color: #b1b1b1;
+      }
+    }
+  }
+  .baozhang{
+    text-align: center;
+    width: 100%;
+    padding-top: 50px;
+    background: #fff;
+    h2{
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-size: 30px;
+      font-weight: bold;
+      i{
+        color: #fb474f;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 800;
+      }
+    }
+    p{
+      font-size: 22px;
+      color: #3d3838;
+      margin: 0;
+    }
+  }
+  .service{
+    width: 100%;
+    padding-top: 20px;
+    background: #fff;
+    height: 66px;
+    display: flex;
+    justify-content: center;
+    .anquan{
+      font-size: 18px;
+      margin-right:35px;
+      img{
+        vertical-align: middle;
+        margin-right: 2px;
+      }
+    }
+  }
+  .cities{
+    width: 100%;
+    padding-top: 50px;
+    height: 170px;
+    background: #fff;
+    overflow: hidden;
+    .city{
+      float: left;
+      font-size: 18px;
+      font-weight: 700;
+      margin-left: 80px;
+    }
+    .citieslist{
+      float: right;
+      margin-left: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      width: 1090px;
+      .cityitem{
+        font-size: 16px;
+        font-style: normal;
+        margin-right: 50px;
+        color: #898989;
+        display: inline-block;
+        line-height: 30px;
+        width: 6%;
+        text-align: center;
+        font-weight: 200;
+        cursor: pointer;
+        a{
+          &:hover{
+            color:#e94840;
+          }
+        }
+      }
+    }
+
+  }
+  .beian{
+    text-align: left;
+    margin-left: 50px;
+    color: #898989;
+    line-height: 40px;
+    font-size: 14px;
+  }
+}

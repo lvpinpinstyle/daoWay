@@ -1,0 +1,266 @@
+.service {
+  width: 100%;
+}
+.service .header {
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-around;
+  width: 1300px;
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid #e5e5e5;
+  height: 65px;
+}
+.service .header.on {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  animation: show 1.5s ease;
+}
+@keyframes show {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.service .header .headerleft {
+  margin-top: 12px;
+}
+.service .header .headermiddle {
+  line-height: 65px;
+}
+.service .header .headermiddle a {
+  font-size: 16px;
+  color: #000;
+}
+.service .header .headermiddle a img {
+  vertical-align: middle;
+}
+.service .header .headermiddle a span {
+  font-weight: bold;
+}
+.service .header .headermiddle a span:last-child:hover {
+  color: #e94840;
+}
+.service .header .headerright {
+  display: flex;
+  width: 45%;
+  justify-content: space-around;
+  line-height: 65px;
+}
+.service .header .headerright .rightitem {
+  /*background-color: #fff;*/
+}
+.service .header .headerright .rightitem a {
+  font-weight: bold;
+  color: #000;
+}
+.service .header .headerright .rightitem a:hover {
+  color: #e94840;
+}
+.service .header .headerright .rightitem:last-child a {
+  background: #e94840;
+  border-radius: 5px;
+  margin-top: 13px;
+  padding: 4px;
+  color: #fff;
+}
+.service .header .headerright .on a {
+  color: #e94840;
+}
+.service h2 {
+  line-height: 85px;
+  width: 1220px;
+  padding: 0 90px;
+  margin: 0 auto;
+  font-size: 18px;
+  margin-top: 66px;
+  font-weight: bold;
+  color: #333;
+}
+.service .content {
+  width: 90%;
+  overflow: hidden;
+  margin: 0 auto 50px;
+}
+.service .content .left {
+  width: 970px;
+  float: left;
+}
+.service .content .left .list {
+  width: 100%;
+  overflow: hidden;
+}
+.service .content .left .list .item {
+  float: left;
+  width: 232px;
+  height: 300px;
+  border: 1px solid #eaeaea;
+  padding: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background: #fff;
+  cursor: pointer;
+  text-align: center;
+  box-sizing: border-box;
+}
+.service .content .left .list .item:hover {
+  box-shadow: 5px 5px 10px #898989;
+}
+.service .content .left .list .item .img {
+  vertical-align: middle;
+  width: 210px;
+  height: 210px;
+}
+.service .content .left .list .item .serviceName {
+  margin-top: 15px;
+  height: 26px;
+  line-height: 26px;
+  text-align: left;
+}
+.service .content .left .list .item .serviceName .icon {
+  margin: 0 6px 5px 0;
+  vertical-align: middle;
+}
+.service .content .left .list .item .serviceName .title {
+  font-size: 16px;
+  margin-left: 0.1rem;
+  font-weight: 700;
+}
+.service .content .left .list .item .ratings {
+  height: 26px;
+  line-height: 26px;
+  overflow: hidden;
+  font-size: 12px;
+}
+.service .content .left .list .item .ratings .lefttitle {
+  float: left;
+  color: #929292;
+}
+.service .content .left .list .item .ratings .righttitle {
+  float: right;
+  color: #929292;
+}
+.service .content .right {
+  float: right;
+  width: 230px;
+}
+.service .content .right .top {
+  cursor: pointer;
+  vertical-align: middle;
+  width: 230px;
+}
+.service .content .right .bottom {
+  width: 230px;
+  height: 290px;
+  background: url('../images/erweima.jpg') no-repeat center;
+  margin-top: 10px;
+}
+.service .content .right .bottom .image {
+  vertical-align: middle;
+  margin: 50px 0 0 50px;
+  width: 130px;
+}
+.service .getmore {
+  width: 100%;
+  margin: 0 auto;
+  height: 152px;
+  text-align: center;
+}
+.service .getmore .more {
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  margin: 50px 5px;
+  background: #fff;
+  display: inline-block;
+  font-size: 16px;
+}
+.service .getmore .more .morestore {
+  color: #b1b1b1;
+}
+.service .baozhang {
+  text-align: center;
+  width: 100%;
+  padding-top: 50px;
+  background: #fff;
+}
+.service .baozhang h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: bold;
+}
+.service .baozhang h2 i {
+  color: #fb474f;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 800;
+}
+.service .baozhang p {
+  font-size: 22px;
+  color: #3d3838;
+  margin: 0;
+}
+.service .service {
+  width: 100%;
+  padding-top: 20px;
+  background: #fff;
+  height: 66px;
+  display: flex;
+  justify-content: center;
+}
+.service .service .anquan {
+  font-size: 18px;
+  margin-right: 35px;
+}
+.service .service .anquan img {
+  vertical-align: middle;
+  margin-right: 2px;
+}
+.service .cities {
+  width: 100%;
+  padding-top: 50px;
+  height: 170px;
+  background: #fff;
+  overflow: hidden;
+}
+.service .cities .city {
+  float: left;
+  font-size: 18px;
+  font-weight: 700;
+  margin-left: 80px;
+}
+.service .cities .citieslist {
+  float: right;
+  margin-left: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 1090px;
+}
+.service .cities .citieslist .cityitem {
+  font-size: 16px;
+  font-style: normal;
+  margin-right: 50px;
+  color: #898989;
+  display: inline-block;
+  line-height: 30px;
+  width: 6%;
+  text-align: center;
+  font-weight: 200;
+  cursor: pointer;
+}
+.service .cities .citieslist .cityitem a:hover {
+  color: #e94840;
+}
+.service .beian {
+  text-align: left;
+  margin-left: 50px;
+  color: #898989;
+  line-height: 40px;
+  font-size: 14px;
+}

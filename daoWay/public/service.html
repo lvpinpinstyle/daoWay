@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>service</title>
+    <link rel="stylesheet" href="./stylesheets/reset.css">
+    <link rel="stylesheet" href="./css/service.css">
+
+    <script type="text/javascript" src="./javascripts/jquery-1.10.1.js"></script>
+    <script type="text/javascript" src="./javascripts/template-web.js"></script>
+</head>
+<body>
+<div class="service">
+    <header class="header">
+        <div class="headerleft">
+            <a href="javascripts:;">
+                <img src="./images/main/logo.png">
+            </a>
+        </div>
+        <div class="headermiddle">
+            <a href="javascripts:;">
+                <img src="./images/main/citypoint.png">
+                <span>北京</span>
+                <span>切换城市</span>
+            </a>
+        </div>
+        <ul class="headerright">
+            <li class="rightitem">
+                <a href="http://localhost:3000/index.html">首页</a>
+            </li>
+            <li class="rightitem">
+                <a href="javascripts:;">到位APP</a>
+            </li>
+            <li class="rightitem on">
+                <a href="http://localhost:3000/service.html">服务商</a>
+            </li>
+            <li class="rightitem">
+                <a href="javascripts:;">商家入驻</a>
+            </li>
+            <li class="rightitem">
+                <a href="javascripts:;">风物APP</a>
+            </li>
+            <li class="rightitem">
+                <a href="javascripts:;">关于我们</a>
+            </li>
+            <li class="rightitem">
+                <a href="javascripts:;">商家登陆</a>
+            </li>
+        </ul>
+    </header>
+    <h2>服务商</h2>
+    <div class="content">
+        <div class="left">
+            <ul class="list" id="list">
+                <!--<li class="item">
+                    <img class="img" src="./images/item1.jpg">
+                    <div class="serviceName">
+                        <img class="icon" src="./images/home1.png">
+                        <span class="title">云家政</span>
+                    </div>
+                    <div class="ratings">
+                        <span class="lefttitle">已接单45536单</span>
+                        <span class="righttitle">好评86% </span>
+                    </div>
+                </li>
+                <li class="item">
+                    <img class="img" src="./images/item1.jpg">
+                    <div class="serviceName">
+                        <img class="icon" src="./images/home1.png">
+                        <span class="title">云家政</span>
+                    </div>
+                    <div class="ratings">
+                        <span class="lefttitle">已接单45536单</span>
+                        <span class="righttitle">好评86% </span>
+                    </div>
+                </li>
+                <li class="item">
+                    <img class="img" src="./images/item1.jpg">
+                    <div class="serviceName">
+                        <img class="icon" src="./images/home1.png">
+                        <span class="title">云家政</span>
+                    </div>
+                    <div class="ratings">
+                        <span class="lefttitle">已接单45536单</span>
+                        <span class="righttitle">好评86% </span>
+                    </div>
+                </li>
+                <li class="item">
+                    <img class="img" src="./images/item1.jpg">
+                    <div class="serviceName">
+                        <img class="icon" src="./images/home1.png">
+                        <span class="title">云家政</span>
+                    </div>
+                    <div class="ratings">
+                        <span class="lefttitle">已接单45536单</span>
+                        <span class="righttitle">好评86% </span>
+                    </div>
+                </li>
+                <li class="item">
+                    <img class="img" src="./images/item1.jpg">
+                    <div class="serviceName">
+                        <img class="icon" src="./images/home1.png">
+                        <span class="title">云家政</span>
+                    </div>
+                    <div class="ratings">
+                        <span class="lefttitle">已接单45536单</span>
+                        <span class="righttitle">好评86% </span>
+                    </div>
+                </li>
+                <li class="item">
+                    <img class="img" src="./images/item1.jpg">
+                    <div class="serviceName">
+                        <img class="icon" src="./images/home1.png">
+                        <span class="title">云家政</span>
+                    </div>
+                    <div class="ratings">
+                        <span class="lefttitle">已接单45536单</span>
+                        <span class="righttitle">好评86% </span>
+                    </div>
+                </li>
+                <li class="item">
+                    <img class="img" src="./images/item1.jpg">
+                    <div class="serviceName">
+                        <img class="icon" src="./images/home1.png">
+                        <span class="title">云家政</span>
+                    </div>
+                    <div class="ratings">
+                        <span class="lefttitle">已接单45536单</span>
+                        <span class="righttitle">好评86% </span>
+                    </div>
+                </li>
+                <li class="item">
+                    <img class="img" src="./images/item1.jpg">
+                    <div class="serviceName">
+                        <img class="icon" src="./images/home1.png">
+                        <span class="title">云家政</span>
+                    </div>
+                    <div class="ratings">
+                        <span class="lefttitle">已接单45536单</span>
+                        <span class="righttitle">好评86% </span>
+                    </div>
+                </li>
+                <li class="item">
+                    <img class="img" src="./images/item1.jpg">
+                    <div class="serviceName">
+                        <img class="icon" src="./images/home1.png">
+                        <span class="title">云家政</span>
+                    </div>
+                    <div class="ratings">
+                        <span class="lefttitle">已接单45536单</span>
+                        <span class="righttitle">好评86% </span>
+                    </div>
+                </li>
+                <li class="item">
+                    <img class="img" src="./images/item1.jpg">
+                    <div class="serviceName">
+                        <img class="icon" src="./images/home1.png">
+                        <span class="title">云家政</span>
+                    </div>
+                    <div class="ratings">
+                        <span class="lefttitle">已接单45536单</span>
+                        <span class="righttitle">好评86% </span>
+                    </div>
+                </li>
+                <li class="item">
+                    <img class="img" src="./images/item1.jpg">
+                    <div class="serviceName">
+                        <img class="icon" src="./images/home1.png">
+                        <span class="title">云家政</span>
+                    </div>
+                    <div class="ratings">
+                        <span class="lefttitle">已接单45536单</span>
+                        <span class="righttitle">好评86% </span>
+                    </div>
+                </li>
+                <li class="item">
+                    <img class="img" src="./images/item1.jpg">
+                    <div class="serviceName">
+                        <img class="icon" src="./images/home1.png">
+                        <span class="title">云家政</span>
+                    </div>
+                    <div class="ratings">
+                        <span class="lefttitle">已接单45536单</span>
+                        <span class="righttitle">好评86% </span>
+                    </div>
+                </li>-->
+            </ul>
+        </div>
+        <div class="right">
+            <img class="top" src="./images/tuijianfuwushang_03.jpg" alt="">
+            <div class="bottom">
+                <img class="image" src="./images/二维码.png" alt="">
+            </div>
+            <div class="bottom">
+                <img class="image" src="./images/二维码.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="getmore">
+        <span class="more">
+            <span class="morestore">查看更多商家</span>
+            <img src="./images/fuwu_down2.jpg" alt="">
+        </span>
+    </div>
+    <div class="baozhang">
+        <h2>到位<i>服务</i>保障</h2>
+        <p>到位平台担保交易安全，交易未成功100%退款</p>
+    </div>
+    <div class="service">
+        <div class="anquan">
+            <img src="./images/anquan.jpg" alt="">
+            <span>优选服务</span>
+        </div>
+        <div class="anquan">
+            <img src="./images/anquan.jpg" alt="">
+            <span>全程保障</span>
+        </div>
+        <div class="anquan">
+            <img src="./images/anquan.jpg" alt="">
+            <span>安全无忧</span>
+        </div>
+    </div>
+    <div class="cities">
+        <div class="city">热门城市</div>
+        <div class="citieswrap">
+            <ul class="citieslist">
+                <!--<li class="cityitem">
+                    <a href="javascripts:;">北京</a>
+                </li>
+                <li class="cityitem">
+                    <a href="javascripts:;">北京</a>
+                </li>
+                <li class="cityitem">
+                    <a href="javascripts:;">北京</a>
+                </li>
+                <li class="cityitem">
+                    <a href="javascripts:;">北京</a>
+                </li>
+                <li class="cityitem">
+                    <a href="javascripts:;">北京</a>
+                </li>
+                <li class="cityitem">
+                    <a href="javascripts:;">北京</a>
+                </li>
+                <li class="cityitem">
+                    <a href="javascripts:;">北京</a>
+                </li>
+                <li class="cityitem">
+                    <a href="javascripts:;">北京</a>
+                </li>
+                <li class="cityitem">
+                    <a href="javascripts:;">北京</a>
+                </li>
+                <li class="cityitem">
+                    <a href="javascripts:;">北京</a>
+                </li>
+                <li class="cityitem">
+                    <a href="javascripts:;">北京</a>
+                </li>
+                <li class="cityitem">
+                    <a href="javascripts:;">北京</a>
+                </li>
+                <li class="cityitem">
+                    <a href="javascripts:;">北京</a>
+                </li>-->
+            </ul>
+        </div>
+    </div>
+    <div class="beian">©2015 版权所有 到位 daoway.com 京ICP备15001471号-1 北京邻家科技有限公司</div>
+
+</div>
+</body>
+<script type="text/html" id="temp3">
+    {{each data.service}}
+    <li class="item">
+        <img class="img" src="{{$value.imgUrl}}">
+        <div class="serviceName">
+            <img class="icon" src="./images/home1.png">
+            <span class="title">{{$value.title}}</span>
+        </div>
+        <div class="ratings">
+            <span class="lefttitle">已接单{{$value.orderCount}}单</span>
+            <span class="righttitle">好评{{$value.positiveRate}} </span>
+        </div>
+    </li>
+    {{/each}}
+</script>
+<script type="text/html" id="temp4">
+    {{each data.city}}
+    <li class="cityitem">
+        <a href="javascripts:;">{{$value.city}}</a>
+    </li>
+    {{/each}}
+</script>
+<script>
+    $(function () {
+        $.get('/getService', function (data) {
+            $('.left>.list').append(template('temp3', {data: data}));
+        })
+        $.get('/getCities', function (data) {
+            $('.citieslist').append(template('temp4', {data: data}));
+        })
+
+        //点击更多消失
+        $('.getmore>.more').click(function () {
+            $('.getmore').css('display','none')
+        })
+
+        //头部定位问题
+        const $header=$('.header')
+        $(document).scroll(function () {
+            if($(this).scrollTop()>66){
+                $header.addClass('on')
+            }else{
+                $header.removeClass('on')
+
+            }
+        })
+
+    })
+
+    window.onload = function () {
+        setTimeout(function () {
+            //点击每一项跳转
+            $('#list > li').click(function () {
+                console.log(1);
+                window.location.href='service-item.html'
+            })
+        }, 1000)
+    }
+
+</script>
+
+</html>

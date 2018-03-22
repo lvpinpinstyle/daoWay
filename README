@@ -1,0 +1,96 @@
+这是一个前后台不分离的项目，后台用express和mongoose
+前台jquery和art-template模板
+准备工作
+    1.后台搭建，express脚手架，自己搭建数据库，建模等；
+      接触的不够深，基本都忘了，查以前的笔记，搭建成功
+      (后台模板默认为jade可以更改ejs，express myapp -e)
+    2.模板：art-template：
+      1.引入art-template，在github上查文档赋值下载文件即可
+      2.创建模板，可以创建多个模板
+      art-template需要保存到内部的script标签中，type=text/html，有一个id标识，id='temp1'
+      3.渲染模板
+      var temp=template('temp1',{data:data})参数：模板，数据
+      4.添加页面$("父标签选择器").append(temp)
+      5.语法
+      <%=数据 %>  会转译
+      <%-数据 %>  不会转译
+      <% if(){  %> if判断语句
+           标签
+      <%       } %>
+      <% %> 脚本片段，用来写js代码
+      6.输出语法
+      {{数据}} 标准语法，相当于<%=数据 %>会转译
+      {{@数据}} 原文输出 相当于<%-数据 %>  不会转译
+      7.条件判断
+       {{if value}}...</if>
+       {{if v1}}...{{else if v2}}...{{/if}}
+      8.循环语句
+       {{each target}}
+            {{$index}}  {{$value}}
+       {{/each}}
+      9.更改时间格式
+        需要引用moment：<script src="https://cdn.bootcss.com/moment.js/2.21.0/moment.min.js"></script>
+        eg：template.defaults.imports.dateFormat = function(date, format){
+               return moment(date).format(format);
+             };
+             var obj = {list:[Date.now(),Date.now()+100]}
+             var t = template('t1', obj);
+             document.getElementById('insert').innerHTML = t
+轮播需要引用swiper
+     <link rel="stylesheet" href="./css/swiper.min.css">
+     <script type="text/javascript" src="./javascripts/swiper.min.js"></script>
+     格式：
+        <div class="banner">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./images/banner1.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/banner2.jpg">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+     在刚进入文件时就创建实力对象
+       var swiper=new Swiper('.swiper-container',{
+          pagination: {
+              el: '.swiper-pagination'
+          },
+          autoplay: true,   配置这个配置自动播放,左右滑动
+          loop:true,
+      })
+       var swiper=new Swiper('.swiper-container',{
+          autoplay: {   这个配置一张透明度消失
+              delay:5000,
+              disableOnInteraction:false
+          },
+          loop:true,
+          spaceBetween:30,
+          effect:'fade',
+          pagination: {
+              el: '.swiper-pagination',
+              clickable:true
+          },
+      })
+星星数组
+  根据获得的数据start的个数，来建立图片数组starImgs，开始创建一个空数组，
+  遍历添加红星星图片url，然后while语句starImgs<5,来将灰星星放进数组中
+  最后遍历星星数组来显示星星的颜色
+页面跳转：window.location.href='路径'
+头部效果：开始不开启定位，利用jquery中的scroll方法来监控scrollY的值
+          当scrollY的值大于70给其固定定位，否则取消定位，
+          用jquery中的css方法也可以，用一个class值on来控制也行
+分页查询：后台查询find，skip(page-1)*10项，sort排序，limit（10），限制10条
+发送ajax请求的时候地址加一个参数page=page，后台可以获取page = req.query.page
+点哪页跳哪页page=$(this).index()+1,每次发送ajax请求，所有的控制背景的classs属性on删除
+当前的index所对应的那一页添加on这个class类名
+点击上下一页，因为要定义全局page，所以page变化都会保存
+上一页就让上一页的背景色变红，添加on类名，点击事件page--
+边界判断：如果page<1,就让page=1，
+if(page>1){ $(pages[page-1]).addClass('on') }
+if(page==1){ $(pages[0]).addClass('on') }
+下一页：边界判断，如果page>9,就让page=9
+ if(page<9){  $(pages[page-1]).addClass('on')}
+ if(page>=9){$(pages[8]).addClass('on') }
