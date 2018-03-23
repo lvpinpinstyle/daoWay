@@ -441,6 +441,9 @@
   cursor: pointer;
   box-sizing: border-box;
 }
+.serviceitem .content .contentleft .leftitem .fenye .pages .ss {
+  display: none;
+}
 .serviceitem .content .contentleft .leftitem .fenye .pages .on {
   background: #fb474f;
 }

@@ -244,6 +244,7 @@
                             <a href="javascripts:;" class="num on">1</a>
                             <a href="javascripts:;" class="num">2</a>
                             <a href="javascripts:;" class="num">3</a>
+                            <span class="ss">...</span>
                             <a href="javascripts:;" class="num">4</a>
                             <a href="javascripts:;" class="num">5</a>
                             <a href="javascripts:;" class="num">6</a>
@@ -255,7 +256,6 @@
                         <a href="javascripts:;" class="nextpage on">> 下一页 </a>
                     </div>
                 </div>
-
             </div>
             <div class="contentright">
                 <div class="bottom">
@@ -399,6 +399,69 @@
        window.location.href='/detail.html'
     }
 
+    const pages=$('#test > a')
+
+    //下一页三点显示
+    function sandian(){
+        if(page>6){
+            for (var i = 0; i < page-2; i++) {
+                $(pages[i]).hide()
+            }
+            for(var j=0;j<2;j++){
+                $(pages[j]).show()
+            }
+            $('.pages>.ss').show()
+        }else{
+            for (var i = 0; i < 9; i++) {
+                $(pages[i]).show()
+                $('.pages>.ss').hide()
+            }
+        }
+        console.log(page);
+    }
+    //上一页三点显示
+    function nextsandian() {
+        if(page>6 &&page<9){
+            for(var i=0;i<page;i++){
+                $(pages[i]).show()
+            }
+            for (var i = 0; i < page-2; i++) {
+                $(pages[i]).hide()
+            }
+            for(var j=0;j<2;j++){
+                $(pages[j]).show()
+            }
+            $(pages[page-1]).show()
+            $('.pages>.ss').show()
+        }else{
+            for (var i = 0; i < 9; i++) {
+                $(pages[i]).show()
+                $('.pages>.ss').hide()
+            }
+        }
+        console.log(page);
+    }
+    //点击谁谁显示三点
+    function thissandian(){
+        if(page>6){
+            for(var i=0;i<page;i++){
+                $(pages[i]).show()
+            }
+            for (var i = 0; i < page-3; i++) {
+                $(pages[i]).hide()
+            }
+            for(var j=0;j<2;j++){
+                $(pages[j]).show()
+            }
+            $('.pages>.ss').show()
+        }else{
+            for (var i = 0; i < 9; i++) {
+                $(pages[i]).show()
+                $('.pages>.ss').hide()
+            }
+        }
+    }
+
     $(function(){
 
         //头部定位问题
@@ -474,12 +537,11 @@
                 $('.fenye>.nextpage').removeClass('on')
             }
         }
-
         //点哪页哪页显示
-        const pages=$('#test > a')
         pages.click(function () {
-            page= $(this).index()+1
+            page= pages.index(this)+1
             setBlack(page)
+            thissandian()
            pages.attr('class','num')
             $(this).addClass('on')
             $.get('/getComments?page='+page, function (data) {
@@ -503,6 +565,7 @@
                 $(pages[0]).addClass('on')
             }
             setBlack(page)
+            nextsandian()
             console.log(page);
             $.get('/getComments?page='+page, function (data) {
                 addStarImg(data)
@@ -526,6 +589,7 @@
             }
             console.log(page);
             setBlack(page)
+            sandian()
             $.get('/getComments?page='+page, function (data) {
                 addStarImg(data)
                 setTime(data)
@@ -533,7 +597,9 @@
             })
         })
 
-
     })
+    //分页ajax请求会返回一个page总页数，我们只能js动态的添加a分页标签
+</script>
+<script>
 </script>
 </html>
